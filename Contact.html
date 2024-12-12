@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Activity Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="default.html.1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accommodations.html">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+        .interactive-table table {
+            transition: transform 0.3s;
+        }
+
+        .interactive-table table:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-section {
+            padding: 20px;
+            margin-top: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-effect {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-effect:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .spinner-border {
+            display: none;
+        }
+
+        .submit-btn:disabled .spinner-border {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Title -->
+    <h2 class="section-title">Need Help?</h2>
+
+    <!-- Interactive Get Help Table -->
+    <div class="interactive-table mb-5">
+        <table class="table table-hover table-bordered text-center">
+            <thead class="table-primary">
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FAQs</td>
+                    <td>Find answers to common questions</td>
+                    <td><a class="btn btn-primary btn-effect" href="FAQ.html">View FAQs</a></td>
+                </tr>
+                <tr>
+                    <td style="height: 14px">Contact Options</td>
+                    <td style="height: 14px">Reach us via phone or email</td>
+                    <td style="height: 14px">Contact Us</td>
+                </tr>
+                <tr>
+                    <td>Guides/Resources</td>
+                    <td>Download helpful guides</td>
+                    <td><a href="guides.html" class="btn btn-primary btn-effect">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Live Chat</td>
+                    <td>Chat with our support team</td>
+                    <td><a href="livechat.html" class="btn btn-primary btn-effect">Start Chat</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div class="form-section mb-5">
+        <h3 class="text-center">Sign Up</h3>
+        <form id="signup-form">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Create a password" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-effect w-100">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Payment Checkout Form -->
+    <div class="form-section">
+        <h3 class="text-center">Payment Checkout</h3>
+        <form id="payment-form">
+            <div class="mb-3">
+                <label for="activities" class="form-label">Select Activities</label>
+                <select id="activities" class="form-select" multiple>
+                    <option value="biking">Biking - $20</option>
+                    <option value="kayaking">Kayaking - $30</option>
+                    <option value="obstacle">Water Obstacle Course - $25</option>
+                    <option value="pool">Indoor Pool - $15</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="card-number" class="form-label">Card Number</label>
+                <input type="text" id="card-number" class="form-control" placeholder="Enter your card number" required>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="card-expiry" class="form-label">Expiry Date</label>
+                    <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="card-cvv" class="form-label">CVV</label>
+                    <input type="text" id="card-cvv" class="form-control" placeholder="CVV" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-effect w-100">Checkout</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Payment processed successfully!');
+    });
+
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Sign-up successful!');
+    });
+</script>
+
+</body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Logo</title>
+    <style>
+        /* Logo styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #1a73e8; /* Bright blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo:hover .logo-text {
+            color: #1a73e8; /* Highlight the text on hover */
+        }
+    .auto-style1 {
+	font-family: Arial;
+}
+.auto-style2 {
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: var(--bs-card-title-spacer-y);
+}
+.auto-style3 {
+	color: #FFFFFF;
+}
+    .auto-style4 {
+		font-family: Arial;
+		font-weight: normal;
+		color: #FFFFFF;
+	}
+    </style>
+</head>
+<body style="background-image: url('background.2-ezgif.com-resize.png')">
+
+    <!-- Logo HTML -->
+    <a href="index.html" class="logo">
+        <div class="logo-circle">LAS</div>
+        <span class="logo-text">Lakeside Activity Centre</span>
+    </a>
+
+
+
+
+
+
+
+
+
+
+</html>

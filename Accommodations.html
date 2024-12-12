@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Activity Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="default.html.1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accommodations.html">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Design */
+        .section {
+            padding: 40px 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            color: #1a73e8;
+        }
+
+        /* Footer Design */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        /* Accordion styling */
+        .accordion-button {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #155bb5;
+        }
+    </style>
+</head>
+<body style="background-image: url('background.2-ezgif.com-resize.png')">
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Logo</title>
+    <style>
+        /* Logo styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #1a73e8; /* Bright blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo:hover .logo-text {
+            color: #1a73e8; /* Highlight the text on hover */
+        }
+    .auto-style1 {
+	font-family: Arial;
+}
+.auto-style2 {
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: var(--bs-card-title-spacer-y);
+}
+.auto-style3 {
+	color: #FFFFFF;
+}
+    .auto-style4 {
+		font-family: Arial;
+		font-weight: normal;
+		color: #FFFFFF;
+	}
+    </style>
+</head>
+<body style="background-image: url('background.2-ezgif.com-resize.png')">
+
+    <!-- Logo HTML -->
+    <a href="index.html" class="logo">
+        <div class="logo-circle">LAS</div>
+        <span class="logo-text">Lakeside Activity Centre</span>
+    </a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Accommodations</h1>
+        <p>Discover our range of unique accommodations for a comfortable and adventurous stay!</p>
+        <div class="nav-links">
+            <a href="#camping">Camping</a>
+            <a href="#wall-climbing">Wall Climbing</a>
+            <a href="#nature-activities">Nature Activities</a>
+        </div>
+    </div>
+
+    <!-- Camping Section -->
+    <div id="camping" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="rsz_1camping_image_accommodations_page.png" alt="Camping area" class="img-fluid rounded shadow" style="height: 400px" width="600">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="auto-style2"><span class="auto-style1">Camping Options</h2>
+                    <p class="auto-style3">Immerse yourself in nature with our diverse camping options. Choose from traditional tents, spacious RV spaces, or luxurious glamping sites equipped with modern amenities.</span></p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wall Climbing Section -->
+    <div id="wall-climbing" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Wall Climbing</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="rsz_1wall_climbing_outdoor_accommodations.png" alt="Climbing Wall" class="card-img-top" height="300" style="width: 400px">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner Friendly</h5>
+                            <p>Our beginner-friendly walls are perfect for first-timers looking to try something new.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="advancedrootswallclimbing-ezgif.com-resize.png" alt="Advanced Climbing Wall" class="card-img-top" height="300" style="width: 400px">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Routes</h5>
+                            <p>Challenge yourself with advanced climbing routes designed for seasoned climbers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="rsz_climbing_events.png" alt="Team Climbing Activities" class="card-img-top" height="300" style="width: 400px">
+                        <div class="card-body">
+                            <h5 class="card-title">Team Activities</h5>
+                            <p>Enjoy group climbing events and competitions for teams of all skill levels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nature Activities Section -->
+    <div id="nature-activities" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Nature Activities</h2>
+            <div class="accordion" id="natureAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#hiking" aria-expanded="true">
+                            Guided Hiking Trails
+                        </button>
+                    </h2>
+                    <div id="hiking" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Explore scenic trails with our expert guides who will ensure a safe and memorable experience.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#birdwatching">
+                            Bird Watching Tours
+                        </button>
+                    </h2>
+                    <div id="birdwatching" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Discover a variety of bird species in their natural habitats with our bird-watching experts.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#naturewalks">
+                            Nature Walks
+                        </button>
+                    </h2>
+                    <div id="naturewalks" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Stroll through serene landscapes and enjoy the beauty of untouched nature.
+                        </div>
+                    </div>
+                </div>
+           </div>
+    </div>
+    
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<div id="accommodation-carousel" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center"><span lang="en-gb">More 
+		Accommodations</span></h2>
+        
+        <!-- Carousel Container -->
+        <div id="accommodationCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#accommodationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Carousel Slides -->
+            <div class="carousel-inner">
+                <!-- Camping Slide -->
+                <div class="carousel-item active">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Accommodation Type</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Take a loook</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Camping</td>
+                                    <td>Enjoy nature with our tent and RV camping options, all nestled in beautiful locations.</td>
+                                    <td><img src="rsz_camping_image_accommodations_page.png" class="rsz_camping_image_accommodations_page.png" alt="Camping Image"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- RV Slide -->
+                <div class="carousel-item">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Accommodation Type</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RV</td>
+                                    <td>Book an RV spot and enjoy modern amenities with a scenic view of nature.</td>
+                                    <td><img src="rsz_rv.png" class="rsz_rv.png" alt="RV Image"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Glamping Slide -->
+                <div class="carousel-item">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Accommodation Type</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Glamping</td>
+                                    <td>Experience luxury camping with our glamping sites equipped with all the comforts of home.</td>
+                                    <td><img src="rsz_glamping.png" class="rsz_glamping.png" alt="Glamping Image"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#accommodationCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#accommodationCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="accommodation-booking" class="section">
+    <div class="container">
+        <h2 class="auto-style4">Book Your Accommodation</h2>
+        <form action="/submit-accommodation-booking" method="POST" class="shadow p-4 rounded bg-white">
+            <div class="mb-3">
+                <label for="full-name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="full-name" name="full-name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="accommodation-type" class="form-label">Accommodation Type</label>
+                <select class="form-select" id="accommodation-type" name="accommodation-type" required>
+                    <option value="tent">Tent</option>
+                    <option value="rv">RV</option>
+                    <option value="glamping">Glamping</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="check-in-date" class="form-label">Check-In Date</label>
+                <input type="date" class="form-control" id="check-in-date" name="check-in-date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="check-out-date" class="form-label">Check-Out Date</label>
+                <input type="date" class="form-control" id="check-out-date" name="check-out-date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="additional-requests" class="form-label">Additional Requests</label>
+                <textarea class="form-control" id="additional-requests" name="additional-requests" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Book Accommodation</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Effects Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Gradient Background Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #007bff, #00d4ff, #ffc107, #ff007a);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Glow Effect on Buttons */
+        .btn-glow {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            transition: 0.4s;
+        }
+
+        .btn-glow:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        .btn-glow:hover:after {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shadowed Text */
+        .text-shadow {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        /* Fancy Border Animation */
+        .fancy-border {
+            position: relative;
+            padding: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #007bff, #00d4ff) border-box;
+            border-radius: 8px;
+            animation: borderAnimation 4s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% { background-size: 200% 200%; }
+            100% { background-position: 100% 0%; }
+        }
+
+        /* Text Typing Animation */
+        #typewriter {
+            font-size: 2rem;
+            color: #007bff;
+            border-right: 2px solid #007bff;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink 0.7s step-end infinite alternate;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button Ripple Effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- TripAdvisor Rating -->
+            <div class="col-md-4 text-center">
+                <h5>TripAdvisor Rating</h5>
+                <p>
+                    <img src="rsz_1tripadvisor.png" alt="TripAdvisor Logo" class="img-fluid" style="height: 50px">
+                </p>
+                <p><strong>4 Stars</strong></p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-4 text-center">
+                <h5>Contact Us</h5>
+                <p><strong>Phone:</strong> +<span lang="en-gb">34 91 123 4567</span></p>
+                <p><strong>Email:</strong> contact@<span lang="en-gb">lakesidebarca</span>.com</p>
+                <p><strong>Address:</strong> <span lang="en-gb">97</span>3<span lang="en-gb">Monquil 
+				Road</span>, <span lang="en-gb">Barca</span>, <span lang="en-gb">
+				Spain</span></p>
+            </div>
+
+            <!-- Activity Center Details -->
+            <div class="col-md-4 text-center">
+                <h5>Activity Center</h5>
+                <p><strong>Location:</strong> 456 Nature Park, City, Country</p>
+                <p><strong>Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+                <p><strong>Sat - Sun:</strong> 10 AM - 4 PM</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="https://www.facebook.com" class="text-white mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="text-white mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="text-white mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<!-- Footer Section -->
+    <div class="footer">
+        <p>© 2024 Lakeside Activity Centre. All rights reserved.</p>
+        <a href="default.html.1.html" style="color: white;">Back to Home </a>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+
+
+
+
+</html>

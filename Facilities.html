@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Activity Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="default.html.1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accommodations.html">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .facilities-header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .facilities-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .facilities-header p {
+            font-size: 1.2rem;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .facility-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .facility-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .facility-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .facility-info h3 {
+            font-size: 1.5rem;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .facility-info p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Accordion Styles */
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button {
+            background-color: #1a73e8;
+            color: white;
+            font-weight: bold;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #fff;
+            background-color: #155bb5;
+        }
+
+        .accordion-body {
+            background-color: #f8f9fa;
+        }
+
+        /* Slider */
+        .facility-slider img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 700px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            color: #1a73e8;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #C0C0C0;">
+
+    <div class="auto-style14">
+        <h1 class="auto-style15">Our Facilities</h1>
+        <p>Experience comfort, convenience, and entertainment</p>
+    </div>
+
+    <div class="container">
+        <!-- Facilities Cards -->
+        <div class="facilities-grid">
+            <!-- Sleeping Rooms -->
+            <div class="facility-card">
+                <img src="rsz_sleeping_rooms.png" alt="Sleeping Rooms" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Sleeping Rooms</h3>
+                    <p>Cozy and modern rooms designed for your comfort and relaxation.</p>
+                    <button class="btn btn-primary" onclick="showDetails('sleeping-rooms')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Café -->
+            <div class="facility-card">
+                <img src="rsz_cafe.png" alt="Café" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Café</h3>
+                    <p>A serene café offering fresh coffee, pastries, and snacks.</p>
+                    <button class="btn btn-primary" onclick="showDetails('cafe')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Games Room -->
+            <div class="facility-card">
+                <img src="gamesroom-ezgif.com-resize.png" alt="Games Room" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Games Room</h3>
+                    <p>An exciting space with arcade games, pool tables, and more.</p>
+                    <button class="btn btn-primary" onclick="showDetails('games-room')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Gym -->
+            <div class="facility-card">
+                <img src="gym-ezgif.com-resize.png" alt="Gym" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Gym</h3>
+                    <p>State-of-the-art gym equipment for your fitness needs.</p>
+                    <button class="btn btn-primary" onclick="showDetails('gym')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Outdoor Patio -->
+            <div class="facility-card">
+                <img src="rsz_1outdoor_patio.png" alt="Outdoor Patio" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Outdoor Patio</h3>
+                    <p>A scenic outdoor area perfect for relaxation and gatherings.</p>
+                    <button class="btn btn-primary" onclick="showDetails('outdoor-patio')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Spa -->
+            <div class="facility-card">
+                <img src="spa-ezgif.com-resize.png" alt="Spa" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Spa</h3>
+                    <p>Relax and rejuvenate with our luxurious spa treatments.</p>
+                    <button class="btn btn-primary" onclick="showDetails('spa')">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Business Center -->
+            <div class="facility-card">
+                <img src="rsz_1business_centre.png" alt="Business Center" style="height: 200px">
+                <div class="facility-info">
+                    <h3>Business Center</h3>
+                    <p class="auto-style9">Fully equipped facilities for all your business needs.</p>
+                    <button class="btn btn-primary" onclick="showDetails('business-center')">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+ 
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .table-hover tbody tr:hover {
+      background-color: #e0f7fa;
+    }
+    .btn-info {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-info:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+      <h1 class="auto-style2">Facilitie<span lang="en-gb"> 
+	  Discription</span></h1>
+    <table class="table table-hover table-bordered text-center">
+      <thead class="table-primary">
+        <tr>
+          <th class="auto-style1">#</th>
+          <th class="auto-style13">Facility Name</span></th>
+          <th class="auto-style1">Description</th>
+          <th class="auto-style1">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="auto-style12">1</td>
+          <td class="auto-style8">Sleeping Rooms</span></td>
+          <td class="auto-style12">Comfortable and cozy rooms for a restful stay.</td>
+          <td>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#facilityModal" onclick="showFacilityDetails('Sleeping Rooms', 'Our sleeping rooms are equipped with all modern amenities including cozy beds, air conditioning, and Wi-Fi.')">View Details</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="auto-style12">2</td>
+          <td class="auto-style8">Café</span></td>
+          <td class="auto-style12">A place to enjoy delicious food and beverages.</td>
+          <td>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#facilityModal" onclick="showFacilityDetails('Café', 'Our café serves a variety of snacks, meals, and beverages in a relaxing atmosphere.')">View Details</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="auto-style12">3</td>
+          <td class="auto-style8">Games Room</span></td>
+          <td class="auto-style12">Fun and engaging activities for all ages.</td>
+          <td>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#facilityModal" onclick="showFacilityDetails('Games Room', 'The games room offers pool tables, board games, and video games for endless fun.')">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <span class="auto-style11">
+
+
+
+
+
+<!DOCTYPE html>
+  </span>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <span class="auto-style11">
+  <title>Facilities</title>
+  </span>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    .facility-card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4"><span lang="en-gb"><span class="auto-style10">&nbsp;&nbsp;&nbsp;
+	</span>
+	<span class="auto-style1">&nbsp;&nbsp;MORE FACILITIES DISCRIPTIONS</span></span></h1>
+    <div class="row">
+      
+      <!-- Gym Facility -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card facility-card">
+          <img src="gym-ezgif.com-resize11.png" class="card-img-top" alt="Gym" style="height: 200px">
+          <div class="card-body">
+            <h5 class="card-title">Gym</h5>
+            <p class="card-text">Our fully equipped gym offers everything you need to stay fit during your stay. With state-of-the-art machines, free weights, and a variety of cardio equipment, you can enjoy a complete workout experience. Open daily with extended hours for your convenience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outdoor Patio Facility -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card facility-card">
+          <img src="rsz_outdoor_patio2.png" class="card-img-top" alt="Outdoor Patio" style="height: 200px">
+          <div class="card-body">
+            <h5 class="card-title">Outdoor Patio</h5>
+            <p class="card-text">Relax and unwind on our beautiful outdoor patio, a perfect space for enjoying fresh air and stunning views. Comfortable seating, garden views, and a tranquil setting make it an ideal spot to connect with nature or simply take a break from your day.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spa Facility -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card facility-card">
+          <img src="rsz_spa-ezgifcom-resize.png" alt="Spa" height="218" width="1126">
+          <div class="card-body">
+            <h5 class="card-title">Spa</h5>
+            <p class="card-text">Indulge in ultimate relaxation at our spa, where tranquility and rejuvenation await you. From soothing massages to luxurious facials, our spa offers a wide range of treatments designed to refresh both body and mind. Our expert therapists ensure you leave feeling renewed and restored.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Center Facility -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card facility-card">
+          <img src="rsz_1business_centre12.png" class="card-img-top" alt="Business Center" style="height: 200px">
+          <div class="card-body">
+            <h5 class="card-title">Business Center</h5>
+            <p class="card-text">Stay productive with ease in our fully equipped business center. Featuring high-speed internet, printing services, and a comfortable workspace, it’s the perfect place for business travelers to work on the go. Stay connected and efficient during your stay.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="facilityModal" tabindex="-1" aria-labelledby="facilityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="facilityModalLabel">Facility Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Facility details will be dynamically added here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showFacilityDetails(name, details) {
+      document.getElementById('facilityModalLabel').textContent = name;
+      document.getElementById('modalBody').textContent = details;
+    }
+  </script>
+</body>
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Logo</title>
+    <style>
+        /* Logo styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #1a73e8; /* Bright blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo:hover .logo-text {
+            color: #1a73e8; /* Highlight the text on hover */
+        }
+    .auto-style1 {
+		font-family: Arial;
+		color: #000000;
+		font-weight: normal;
+	}
+	.auto-style2 {
+		font-family: Arial;
+		font-weight: normal;
+	}
+	.auto-style8 {
+		color: #000000;
+		border-left-color: #C0C0C0;
+		border-right-color: #A0A0A0;
+		border-top-color: #C0C0C0;
+		border-bottom-color: #A0A0A0;
+	}
+    .auto-style9 {
+		font-family: Arial;
+	}
+	.auto-style10 {
+		font-weight: normal;
+		color: #000000;
+	}
+	.auto-style11 {
+		color: #000000;
+	}
+	.auto-style12 {
+		font-family: Arial;
+		color: #000000;
+	}
+	.auto-style13 {
+		color: #000000;
+		border-left-color: #C0C0C0;
+		border-right-color: #A0A0A0;
+		border-top-color: #C0C0C0;
+		border-bottom-color: #A0A0A0;
+		font-weight: normal;
+	}
+	.auto-style14 {
+		text-align: center;
+		padding: 50px 20px;
+		background-color: #1a73e8;
+		font-family: Arial;
+	}
+	.auto-style15 {
+		font-weight: normal;
+	}
+    </style>
+</head>
+<body style="background-color: #C0C0C0;">
+
+    <!-- Logo HTML -->
+    <a href="index.html" class="logo">
+        <div class="logo-circle">LAS</div>
+        <span class="logo-text">Lakeside Activity Centret</span>
+    </a>
+</body>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Sign In</h1>
+
+    <!-- Sign In Form -->
+    <div class="form-container">
+      <form id="sign-in-form">
+        <div class="mb-3">
+          <label for="signin-email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="signin-email" required>
+        </div>
+        <div class="mb-3">
+          <label for="signin-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="signin-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+      </form>
+
+      <!-- Sign Up Link -->
+      <div class="form-link">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Effects Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Gradient Background Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #007bff, #00d4ff, #ffc107, #ff007a);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Glow Effect on Buttons */
+        .btn-glow {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            transition: 0.4s;
+        }
+
+        .btn-glow:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        .btn-glow:hover:after {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shadowed Text */
+        .text-shadow {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        /* Fancy Border Animation */
+        .fancy-border {
+            position: relative;
+            padding: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #007bff, #00d4ff) border-box;
+            border-radius: 8px;
+            animation: borderAnimation 4s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% { background-size: 200% 200%; }
+            100% { background-position: 100% 0%; }
+        }
+
+        /* Text Typing Animation */
+        #typewriter {
+            font-size: 2rem;
+            color: #007bff;
+            border-right: 2px solid #007bff;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink 0.7s step-end infinite alternate;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button Ripple Effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+</body>
+
+
+ 
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- TripAdvisor Rating -->
+            <div class="col-md-4 text-center">
+                <h5>TripAdvisor Rating</h5>
+                <p>
+                    <img src="rsz_1tripadvisor.png" alt="TripAdvisor Logo" class="img-fluid" style="height: 50px">
+                </p>
+                <p><strong>4 Stars</strong></p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-4 text-center">
+                <h5>Contact Us</h5>
+                <p><strong>Phone:</strong> +<span lang="en-gb">34 91 123 4567</span></p>
+                <p><strong>Email:</strong> contact@<span lang="en-gb">lakesidebarca</span>.com</p>
+                <p><strong>Address:</strong> <span lang="en-gb">97</span>3<span lang="en-gb">Monquil 
+				Road</span>, <span lang="en-gb">Barca</span>, <span lang="en-gb">
+				Spain</span></p>
+            </div>
+
+            <!-- Activity Center Details -->
+            <div class="col-md-4 text-center">
+                <h5>Activity Center</h5>
+                <p><strong>Location:</strong> 456 Nature Park, City, Country</p>
+                <p><strong>Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+                <p><strong>Sat - Sun:</strong> 10 AM - 4 PM</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="https://www.facebook.com" class="text-white mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="text-white mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="text-white mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- Footer Section -->
+    <div class="footer">
+        <p class="auto-style9">© 2024 Lakeside Activity Centre. All rights reserved.</p>
+        <a href="default.html.1.html">Back to Home </a>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+

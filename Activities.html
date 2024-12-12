@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<script type="text/javascript" src="textsizer.js">
+
+/***********************************************
+
+* Document Text Sizer- Copyright 2003 - Taewook Kang.  All rights reserved.
+
+* Coded by: Taewook Kang (http://www.txkang.com)
+
+* This notice must stay intact for use
+
+* Visit http://www.dynamicdrive.com/ for full source code
+
+***********************************************/
+
+</script>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Activity Center</title>
+    <!-- Bootstrap CDN -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link href="all.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background: linear-gradient(to right, #0066cc, #3399ff);
+        }
+        .navbar a {
+            color: white;
+            text-transform: uppercase;
+        }
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+        .activity-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .activity-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    .auto-style4 {
+		text-align: center;
+		font-weight: normal;
+	}
+	.auto-style6 {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+		}
+.auto-style7 {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	margin-top: 0px;
+}
+    .auto-style8 {
+		font-family: "Segoe UI";
+		color: #000000;
+		font-weight: normal;
+	}
+	.auto-style9 {
+		font-family: "Segoe UI";
+	}
+	.auto-style12 {
+		font-family: "Segoe UI";
+		font-weight: normal;
+		font-size: xx-large;
+	}
+	.auto-style13 {
+		font-size: xx-large;
+	}
+	.auto-style14 {
+		font-family: "Segoe UI";
+		font-size: x-large;
+		}
+	.auto-style15 {
+		display: block;
+		font-size: 80%;
+		color: #000000;
+		font-family: "Segoe UI";
+	}
+	.auto-style16 {
+		font-size: large;
+	}
+	.auto-style17 {
+		font-family: "Segoe UI";
+		font-weight: normal;
+		font-size: x-large;
+		}
+	.auto-style18 {
+		font-family: "Segoe UI";
+		font-weight: normal;
+	}
+	</style>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="background-color: #C0C0C0; ">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Activity Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="default.html.1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accommodations.html">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container my-5 text-center" style="font-family: 'Segoe UI'; ">
+        <h1 class="auto-style18">Explore Our Exciting <span lang="en-gb">Outdoor
+		</span>Activities</h1>
+        <p class="auto-style17">From adventurous trails to relaxing pools, we have something for everyone!</p>
+    </section>
+
+    <!-- Activities Sections -->
+    <section id="biking" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="rsz_bike_riding.png" class="img-fluid rounded" alt="Biking">
+            </div>
+            <div class="col-md-6">
+                <h2><span class="auto-style9"><span class="auto-style27">Biking</span></h2>
+                <p class="auto-style26">Experience thrilling biking trails that wind through picturesque landscapes. Whether you're a beginner or an experienced rider, we have trails to suit your skill level.</span></p>
+                <button class="btn btn-primary btn-lg" data-toggle="tooltip" title="Click to learn more about Biking!" type="submit">Learn More</button>
+                <button class="btn btn-success btn-lg" data-toggle="tooltip" title="Book your biking session now!">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="kayaking" class="container my-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img src="rsz_kayakingpiotr.png" class="img-fluid rounded" alt="Kayaking">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h2><span class="auto-style9"><span class="auto-style27">Kayaking</span></h2>
+                <p class="auto-style16">Glide across serene waters in our kayaking sessions. Perfect for families, solo adventurers, and thrill-seekers!</span></p>
+                <button class="btn btn-primary btn-lg" data-toggle="tooltip" title="Learn more about Kayaking!">Learn More</button>
+                <button class="btn btn-success btn-lg" data-toggle="tooltip" title="Book your kayaking adventure now!">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="obstacle" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="rsz_waterpark_new_image.png" class="img-fluid rounded" alt="Obstacle Courses">
+            </div>
+            <div class="col-md-6">
+                <h2><span class="auto-style9"><span class="auto-style27">Water Obstacle Courses</span></h2>
+                <p class="auto-style16">Dive into our challenging water obstacle courses. Fun for all ages, these courses test your strength and agility!</span></p>
+                <button class="btn btn-primary btn-lg" data-toggle="tooltip" title="Discover more about Water Obstacle Courses!">Learn More</button>
+                <button class="btn btn-success btn-lg" data-toggle="tooltip" title="Book your obstacle course session!">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="indoor-pool" class="container my-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img src="rsz_swimming_pool.jpg" class="img-fluid rounded" alt="Indoor Pools">
+            </div>
+            
+          <section id="highlight-video" class="container my-5">
+    <h2 class="auto-style4"><span class="auto-style9">
+	<span lang="en-gb" class="auto-style12">Quick</span><span class="auto-style12"> Video</span></h2>
+    <p class="auto-style6"><span lang="en-gb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<span class="auto-style16">&nbsp;&nbsp; </span></span>
+	<span class="auto-style16">Take a sneak peek at all the amazing activities we offer at our Activity Center!</span></span></p>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9" style="left: 0px; top: 0px">
+                <video id="activityVideo" class="embed-responsive-item" controls>
+                    <source src="My Movie. callum.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <button class="btn btn-primary btn-lg" onclick="playVideo()">Play Video</button>
+        <button class="btn btn-danger btn-lg" onclick="pauseVideo()">Pause Video</button>
+        <button class="btn btn-success btn-lg" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+</section>
+
+<script>
+    const video = document.getElementById("activityVideo");
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+
+    function toggleFullscreen() {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) { /* Safari */
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) { /* IE11 */
+            video.msRequestFullscreen();
+        }
+    }
+
+</body>
+</html>
+
+
+
+
+
+</script>
+  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-6 order-md-1" style="left: 0px; top: 0px">
+                <h2 class="auto-style12">Indoor Pools</h2>
+                <p class="auto-style8"><span class="auto-style26">Relax and unwind in our indoor pools. With warm, crystal-clear water, they are perfect for a rejuvenating swim</span>.</p>
+                <button class="btn btn-primary btn-lg" data-toggle="tooltip" title="Find out more about Indoor Pools!">Learn More</button>
+                <button class="btn btn-success btn-lg" data-toggle="tooltip" title="Book your pool time now!">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        // Initialize tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</div>
+
+
+
+
+
+
+
+<!-- Sidebar -->
+<div class="sidebar" style="position: fixed; top: 50%; right: 0; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+    <h4>Quick Links</h4>
+    <a href="rsz_bike_riding.png" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Biking Pic</a>
+    <a href="rsz_kayakingpiotr.png" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Kayaking Pic</a>
+    <a href="rsz_waterpark_new_image.png" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Waterpark Pic</a>
+    <a href="rsz_swimming_pool.jpg" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Indoor Swimming Pool Pic</a>
+    <a href="Top Reviews" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Top Reviews</a>
+    
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Activity Center</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+
+    <!-- Page Heading Section -->
+    <section id="activities-header" class="container text-center my-5">
+        <h1 class="display-4">
+		<span class="auto-style12" lang="en-gb">&nbsp;&nbsp;&nbsp; Explore e</span><span class="auto-style12">xciting
+		<span class="auto-style13" lang="en-gb">Indoor </span>
+		<span class="auto-style13">Activities</span></span><span class="auto-style27">
+		</span></h1>
+        <p class="auto-style14">Explore a wide range of outdoor and indoor activities designed to keep you active and entertained!</p>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="container my-5">
+        <div class="row">
+            <!-- Activity: Biking -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="wallclimb-ezgif.com-resize.png" class="auto-style7" alt="Biking" height="308" width="349">
+                    <div class="card-body">
+                        <h5 class="card-title"><span lang="en-gb">Wall Climbing</span></h5>
+                        <p class="card-text"><span lang="en-gb">Can you&nbsp; 
+						climb the 3 levels of our Climbing Walls?</span></p>
+                        <a href="#biking" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity: Kayaking -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="adventurecentre-ezgif.com-resize.png" class="card-img-top" alt="Kayaking" height="308" style="width: 349px">
+                    <div class="card-body">
+                        <h5 class="card-title"><span lang="en-gb">Adventure 
+						Centre</span></h5>
+                        <p class="card-text"><span lang="en-gb">Go on to solve 
+						mysteries and have a brilliant time with friends and 
+						family!</span></p>
+                        <a href="#kayaking" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity: Water Obstacle Course -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="toddlerbounce-ezgif.com-resize%20(1).png" class="card-img-top" alt="Water Obstacle Course" style="width: 349px">
+                    <div class="card-body">
+                        <h5 class="card-title"><span lang="en-gb">Toddler 
+						Activities</span></h5>
+                        <p class="card-text">Challenge yourself with our 
+						thrilling <span lang="en-gb">Activities</span> designed for fun and excitement<span lang="en-gb"> 
+						and safety of toddlers</span>!</p>
+                        <a href="#obstacle" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity: Indoor Pools -->                                                                                                                         
+    
+                                                                                                    
+              <div class="col-md-4 mb-4">                                                                                                                                   
+                <div class="card" style="left: 0px; top: 0px">
+                    <img src="inflatablepark-ezgif.com-resize%20(1).png" class="card-img-top" alt="Indoor Pools" style="width: 349px">&nbsp;
+                      <div class="card-body">
+                        <h5 class="card-title"><span lang="en-gb">Inflatable
+						Activities</span></h5>
+                        <p class="card-text">Challenge yourself with our 
+						thrilling <span lang="en-gb">Activities</span> designed for fun and excitement<span lang="en-gb"> 
+						and lovely inflatable castle</span>!</p>
+                        <a href="#obstacle" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+  
+  
+
+
+
+
+ </div>
+        </div>
+    </section>
+
+    <!-- Visitor Reviews Section -->
+    <section id="reviews" class="container my-5">
+        <h2 class="auto-style20">What Our Visitors Say</h2>
+        <div class="row">
+            <!-- Review 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"I had an amazing time kayaking at the Activity Center. The staff was friendly, and the scenery was breathtaking!"</p>
+                        <footer class="auto-style15">John Doe, Visitor</footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"The water obstacle course was so much fun! It was challenging and exciting. Highly recommended!"</p>
+                        <footer class="auto-style15">Jane Smith, Visitor</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Logo</title>
+    <style>
+        /* Logo styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #1a73e8; /* Bright blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo:hover .logo-text {
+            color: #1a73e8; /* Highlight the text on hover */
+        }
+    .auto-style20 {
+		text-align: center;
+		font-family: "Segoe UI";
+		font-weight: normal;
+		}
+	.auto-style26 {
+		font-size: x-large;
+	}
+	.auto-style27 {
+		font-weight: normal;
+	}
+    </style>
+</head>
+<body>
+
+    <!-- Logo HTML -->
+    <a href="index.html" class="logo">
+        <div class="logo-circle">LAS</div>
+        <span class="logo-text">Lakeside Activity Centre</span>
+    </a>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Activity</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script>
+    // Function to show the thank you message
+    function showThankYouMessage(event) {
+      event.preventDefault(); // Prevent form from refreshing the page
+
+      // Hide the booking form
+      document.getElementById('booking-form').style.display = 'none';
+
+      // Show the thank you message
+      document.getElementById('thank-you-message').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Book Your Activity</h1>
+    
+    <!-- Booking Form -->
+    <form id="booking-form" onsubmit="showThankYouMessage(event)">
+      <div class="mb-3">
+        <label for="activity" class="form-label">Choose Activity</label>
+        <select id="activity" class="form-select" required>
+          <option value="Biking">Biking</option>
+          <option value="Kayaking">Kayaking</option>
+          <option value="Water Obstacle Course">Water Obstacle Course</option>
+          <option value="Indoor Pool">Indoor Pool</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Preferred Date</label>
+        <input type="date" id="date" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thank-you-message" class="alert alert-success mt-4" style="display:none;">
+      <h4 class="alert-heading">Thank You!</h4>
+      <p>Your activity booking has been successfully submitted. We will contact you with further details.</p>
+    </div>
+
+  </div>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Effects Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Gradient Background Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #007bff, #00d4ff, #ffc107, #ff007a);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Glow Effect on Buttons */
+        .btn-glow {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            transition: 0.4s;
+        }
+
+        .btn-glow:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        .btn-glow:hover:after {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shadowed Text */
+        .text-shadow {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        /* Fancy Border Animation */
+        .fancy-border {
+            position: relative;
+            padding: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #007bff, #00d4ff) border-box;
+            border-radius: 8px;
+            animation: borderAnimation 4s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% { background-size: 200% 200%; }
+            100% { background-position: 100% 0%; }
+        }
+
+        /* Text Typing Animation */
+        #typewriter {
+            font-size: 2rem;
+            color: #007bff;
+            border-right: 2px solid #007bff;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink 0.7s step-end infinite alternate;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button Ripple Effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- TripAdvisor Rating -->
+            <div class="col-md-4 text-center">
+                <h5>TripAdvisor Rating</h5>
+                <p>
+                    <img src="rsz_1tripadvisor.png" alt="TripAdvisor Logo" class="img-fluid" style="height: 50px">
+                </p>
+                <p><strong>4 Stars</strong></p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-4 text-center">
+                <h5>Contact Us</h5>
+                <p><strong>Phone:</strong> +<span lang="en-gb">34 91 123 4567</span></p>
+                <p><strong>Email:</strong> contact@<span lang="en-gb">lakesidebarca</span>.com</p>
+                <p><strong>Address:</strong> <span lang="en-gb">97</span>3<span lang="en-gb">Monquil 
+				Road</span>, <span lang="en-gb">Barca</span>, <span lang="en-gb">
+				Spain</span></p>
+            </div>
+
+            <!-- Activity Center Details -->
+            <div class="col-md-4 text-center">
+                <h5>Activity Center</h5>
+                <p><strong>Location:</strong> 456 Nature Park, City, Country</p>
+                <p><strong>Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+                <p><strong>Sat - Sun:</strong> 10 AM - 4 PM</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="https://www.facebook.com" class="text-white mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="text-white mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="text-white mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+    <footer class="bg-primary text-white text-center py-4">
+        <p>&copy; 2024 Lakeside Activity Center. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

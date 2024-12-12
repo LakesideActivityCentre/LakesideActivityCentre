@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Activity Center</title>
+    <!-- Bootstrap CDN -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome CDN for social icons -->
+    <link href="all.min.css" rel="stylesheet">
+    <style>
+        .postit {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.postit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fce300;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.postit-header button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.postit-header button:hover {
+  background-color: #e74c3c;
+}
+
+.postit-content {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+        .navbar {
+            background: linear-gradient(to right, #0066cc, #3399ff); /* Gradient background */
+        }
+        .navbar a {
+            color: white;
+            text-transform: uppercase;
+        }
+        .navbar a:hover {
+            color: #ffcc00; /* Hover color */
+        }
+        .navbar .social-icons a {
+            color: white;
+            margin-left: 10px;
+        }
+        .navbar .social-icons a:hover {
+            color: #ffcc00;
+        }
+        .navbar-toggler-icon {
+            background-color: white; /* White toggle button */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    .auto-style2 {
+		font-family: "Segoe UI";
+		}
+	</style>
+</head>
+<body style="background-color: #C0C0C0; ">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Activity Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="default.html.1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="activities.html">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accommodations.html">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+            
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imresizer-1733779824275.png%20%20" class="d-block w-100" alt="Activity 1" style="height: 500px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to the Activity Center</h5>
+                    <p>Explore exciting outdoor adventures and more!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imresizer-1733779964422.png" class="d-block w-100" alt="Activity 2">
+            </div>
+            <div class="carousel-item">
+                <img src="imresizer-1733780113860.png" class="d-block w-100" alt="Activity 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="auto-style9">About Our Activity Center</h2>
+        <p class="auto-style2">Our Activity Center offers a variety of outdoor and indoor adventures for all ages. Whether you're looking for thrilling biking trails or relaxing in our cafe, we have something for everyone!</p>
+        <img src="imresizer-1733780252620.png" class="img-fluid" alt="Activity Center">
+    </section>
+
+    <!-- Social Media Links -->
+    <section id="socials" class="container my-5">
+        <h3 class="auto-style9">Follow Us</h3>
+        <a href="#" class="btn btn-primary btn-lg mr-2">Facebook</a>
+        <a href="#" class="btn btn-info btn-lg mr-2">Instagram</a>
+        <a href="#" class="btn btn-dark btn-lg">Twitter</a>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="container my-5">
+        <h3 class="auto-style9">Find Us</h3>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.924544810118!2d144.95721461531673!3d-37.81213007975101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5eea56e7ab%3A0xd7edc54829fc019!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1631033761150!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+
+
+
+
+
+
+<!-- Sidebar -->
+<div class="sidebar" style="position: fixed; top: 70%; right: 0; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+    <h4>Quick Links</h4>
+    <a href="default.html.1.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Home</a>
+    <a href="activities.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Activities</a>
+    <a href="accommodations.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Accommodations</a>
+    <a href="facilities.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Facilities</a>
+    <a href="faq.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">FAQ</a>
+    <a href="contact.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-bottom: 15px; display: block;">Contact Form</a>
+</div>
+
+
+
+
+
+
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Logo</title>
+    <style>
+        /* Logo styles */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #1a73e8; /* Bright blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo:hover .logo-text {
+            color: #1a73e8; /* Highlight the text on hover */
+        }
+    .auto-style6 {
+		background-color: #C0C0C0;
+	}
+	.auto-style7 {
+		color: #000000
+	}
+	.auto-style8 {
+		color: #000000;
+		font-weight: normal;
+	}
+	.auto-style9 {
+		font-family: "Segoe UI";
+		font-weight: normal;
+	}
+    </style>
+</head>
+<body>
+
+    <!-- Logo HTML -->
+    <a href="index.html" class="logo">
+        <div class="logo-circle">LAS</div>
+        <span class="logo-text">Lakeside Activity Centre</span>
+    </a>
+
+</body>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakeside Activity Centre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="auto-style8">Lakeside Activity Centre - Details</h1>
+        <table id="infoTable" class="auto-style6">
+            <thead>
+                <tr>
+                    <th class="auto-style8">Type</th>
+                    <th class="auto-style8">Name</th>
+                    <th class="auto-style8">Description</th>
+                    <th class="auto-style8">Features</th>
+                    <th class="auto-style8">Capacity</th>
+                    <th class="auto-style8">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Activities -->
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Biking</td>
+                    <td class="auto-style7">Explore scenic trails with various difficulty levels.</td>
+                    <td class="auto-style7">Mountain bikes, safety gear, guided tours</td>
+                    <td class="auto-style7">Groups of up to 20</td>
+                    <td class="auto-style7">$25/hour</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Kayaking</td>
+                    <td class="auto-style7">Enjoy peaceful kayaking on the serene lake.</td>
+                    <td class="auto-style7">Single/double kayaks, life jackets</td>
+                    <td class="auto-style7">Groups of up to 10</td>
+                    <td class="auto-style7">$30/hour</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Water Obstacle Course</td>
+                    <td class="auto-style7">A fun water-based adventure for all ages.</td>
+                    <td class="auto-style7">Inflatable obstacles, lifeguards on site</td>
+                    <td class="auto-style7">Up to 15 participants at a time</td>
+                    <td class="auto-style7">$20/session</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Indoor Pool</td>
+                    <td class="auto-style7">A heated indoor pool with a separate kids’ section.</td>
+                    <td class="auto-style7">Changing rooms, lifeguards, pool toys</td>
+                    <td class="auto-style7">50 people</td>
+                    <td class="auto-style7">$15/day pass</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Wall Climbing (Indoor)</td>
+                    <td class="auto-style7">A safe indoor climbing wall for beginners and experts.</td>
+                    <td class="auto-style7">Climbing gear, trainers, various wall difficulties</td>
+                    <td class="auto-style7">10 climbers at a time</td>
+                    <td class="auto-style7">$25/hour</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Adventure Center</td>
+                    <td class="auto-style7">A mix of obstacle courses and physical challenges.</td>
+                    <td class="auto-style7">Guides, obstacle structures, training sessions</td>
+                    <td class="auto-style7">Groups of up to 30</td>
+                    <td class="auto-style7">$40/session</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Toddler Activities</td>
+                    <td class="auto-style7">Special activities designed for children under 5.</td>
+                    <td class="auto-style7">Playgrounds, educational games</td>
+                    <td class="auto-style7">20 toddlers</td>
+                    <td class="auto-style7">$10/hour</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Activity</td>
+                    <td class="auto-style7">Inflatable Castles</td>
+                    <td class="auto-style7">Fun inflatable castles for kids and adults alike.</td>
+                    <td class="auto-style7">Supervised area, safety mats</td>
+                    <td class="auto-style7">15 people</td>
+                    <td class="auto-style7">$15/hour</td>
+                </tr>
+
+                <!-- Accommodations -->
+                <tr>
+                    <td class="auto-style7">Accommodation</td>
+                    <td class="auto-style7">Camping</td>
+                    <td class="auto-style7">Spacious camping grounds near the lake.</td>
+                    <td class="auto-style7">Fire pits, picnic tables, restrooms</td>
+                    <td class="auto-style7">100 tents</td>
+                    <td class="auto-style7">$30/night</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Accommodation</td>
+                    <td class="auto-style7">Tents</td>
+                    <td class="auto-style7">Pre-pitched tents for easy camping.</td>
+                    <td class="auto-style7">Bedding, lighting</td>
+                    <td class="auto-style7">50 tents</td>
+                    <td class="auto-style7">$40/night</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Accommodation</td>
+                    <td class="auto-style7">RV</td>
+                    <td class="auto-style7">RV parking with electrical and water hookups.</td>
+                    <td class="auto-style7">Utility hookups, scenic parking spots</td>
+                    <td class="auto-style7">30 RVs</td>
+                    <td class="auto-style7">$50/night</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Accommodation</td>
+                    <td class="auto-style7">Glamping</td>
+                    <td class="auto-style7">Luxury camping experience with all amenities.</td>
+                    <td class="auto-style7">Luxury tents, furniture, private bathrooms</td>
+                    <td class="auto-style7">20 tents</td>
+                    <td class="auto-style7">$100/night</td>
+                </tr>
+
+                <!-- Facilities -->
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Sleeping Rooms</td>
+                    <td class="auto-style7">Comfortable rooms for a good night’s rest.</td>
+                    <td class="auto-style7">Air conditioning, Wi-Fi, private bathrooms</td>
+                    <td class="auto-style7">50 rooms</td>
+                    <td class="auto-style7">$80/night</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Café</td>
+                    <td class="auto-style7">Relax and enjoy freshly brewed coffee and snacks.</td>
+                    <td class="auto-style7">Outdoor seating, free Wi-Fi</td>
+                    <td class="auto-style7">30 seats</td>
+                    <td class="auto-style7">Menu-priced</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Gaming Room</td>
+                    <td class="auto-style7">A fun space for video and board games.</td>
+                    <td class="auto-style7">Gaming consoles, board games, seating</td>
+                    <td class="auto-style7">20 people</td>
+                    <td class="auto-style7">$5/hour</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Spa</td>
+                    <td class="auto-style7">Relax and unwind with our spa services.</td>
+                    <td class="auto-style7">Massage, sauna, facial treatments</td>
+                    <td class="auto-style7">10 people</td>
+                    <td class="auto-style7">$50/session</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Gym</td>
+                    <td class="auto-style7">A fully equipped gym for fitness enthusiasts.</td>
+                    <td class="auto-style7">Weights, cardio machines, personal trainers</td>
+                    <td class="auto-style7">20 people</td>
+                    <td class="auto-style7">$10/day pass</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Outdoor Patio</td>
+                    <td class="auto-style7">A scenic outdoor space for relaxation.</td>
+                    <td class="auto-style7">Tables, lounge chairs, lake view</td>
+                    <td class="auto-style7">40 people</td>
+                    <td class="auto-style7">Free</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Facility</td>
+                    <td class="auto-style7">Business Centre</td>
+                    <td class="auto-style7">Perfect for meetings and work needs.</td>
+                    <td class="auto-style7">Conference rooms, Wi-Fi, printing services</td>
+                    <td class="auto-style7">20 people</td>
+                    <td class="auto-style7">$20/hour</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Initialize the table as a data table
+        document.addEventListener("DOMContentLoaded", () => {
+            const table = new simpleDatatables.DataTable("#infoTable");
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- Tell a Friend Form (Initially Hidden) -->
+<div id="tellAFriendForm" class="form-popup">
+  <div class="form-container">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h3>Tell a Friend About Lakeside Activity Centre</h3>
+    <form id="tellAFriend" onsubmit="sendEmail(event)">
+      <label for="friendName">Friend's Name:</label><br>
+      <input type="text" id="friendName" name="friendName" required><br><br>
+      
+      <label for="friendEmail">Friend's Email:</label><br>
+      <input type="email" id="friendEmail" name="friendEmail" required><br><br>
+      
+      <label for="message">Personal Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="30" placeholder="Write a message to your friend" required></textarea><br><br>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // Open the form
+  function openForm() {
+    document.getElementById("tellAFriendForm").style.display = "block";
+  }
+
+  // Close the form
+  function closeForm() {
+    document.getElementById("tellAFriendForm").style.display = "none";
+  }
+
+  // Handle form submission (Simulating sending an email)
+  function sendEmail(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    // Get form data
+    var friendName = document.getElementById("friendName").value;
+    var friendEmail = document.getElementById("friendEmail").value;
+    var message = document.getElementById("message").value;
+
+    // Simulate email sending
+    alert("Your message has been sent!\n\nTo: " + friendEmail + "\nMessage: " + message);
+
+    // Close the form after submission
+    closeForm();
+
+    // Reset form fields
+    document.getElementById("tellAFriend").reset();
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- TripAdvisor Rating -->
+            <div class="col-md-4 text-center">
+                <h5>TripAdvisor Rating</h5>
+                <p>
+                    <img src="rsz_1tripadvisor.png" alt="TripAdvisor Logo" class="img-fluid" style="height: 50px">
+                </p>
+                <p><strong>4 Stars</strong></p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-4 text-center">
+                <h5>Contact Us</h5>
+                <p><strong>Phone:</strong> +<span lang="en-gb">34 91 123 4567</span></p>
+                <p><strong>Email:</strong> contact@<span lang="en-gb">lakesidebarca</span>.com</p>
+                <p><strong>Address:</strong> <span lang="en-gb">97</span>3<span lang="en-gb">Monquil 
+				Road</span>, <span lang="en-gb">Barca</span>, <span lang="en-gb">
+				Spain</span></p>
+            </div>
+
+            <!-- Activity Center Details -->
+            <div class="col-md-4 text-center">
+                <h5>Activity Center</h5>
+                <p><strong>Location:</strong> 456 Nature Park, City, Country</p>
+                <p><strong>Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+                <p><strong>Sat - Sun:</strong> 10 AM - 4 PM</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="https://www.facebook.com" class="text-white mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="text-white mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" class="text-white mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lakeside Activity Center. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Effects Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Gradient Background Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(270deg, #007bff, #00d4ff, #ffc107, #ff007a);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Glow Effect on Buttons */
+        .btn-glow {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            transition: 0.4s;
+        }
+
+        .btn-glow:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        .btn-glow:hover:after {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shadowed Text */
+        .text-shadow {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        /* Fancy Border Animation */
+        .fancy-border {
+            position: relative;
+            padding: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #007bff, #00d4ff) border-box;
+            border-radius: 8px;
+            animation: borderAnimation 4s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% { background-size: 200% 200%; }
+            100% { background-position: 100% 0%; }
+        }
+
+        /* Text Typing Animation */
+        #typewriter {
+            font-size: 2rem;
+            color: #007bff;
+            border-right: 2px solid #007bff;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink 0.7s step-end infinite alternate;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button Ripple Effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<a href="javascript:ts('body',1)"><span class="auto-style42">
+
++ Larger Font</span></a><span class="auto-style42"> | 
+
+</span> <a href="javascript:ts('body',-1)"><span class="auto-style42">
+
++ Smaller Font</span></a>
+
+
+
+<script type="text/javascript">
+  window.onload = function() {
+    alert("Welcome to Lakeside Activity Centre! Best Viewed at approx 1920x1080");
+  };
+</script>
+
+
+
+
+
+<div id="postitNote" class="postit">
+  <div class="postit-header">
+    <span>Note</span>
+    <button onclick="closeNote()">X</button>
+  </div>
+  <div class="postit-content">
+    <textarea id="noteContent" placeholder="Write your note here..." rows="6" cols="20"></textarea>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  // Make the sticky note draggable
+  var note = document.getElementById("postitNote");
+
+  note.onmousedown = function (e) {
+    var shiftX = e.clientX - note.getBoundingClientRect().left;
+    var shiftY = e.clientY - note.getBoundingClientRect().top;
+
+    document.onmousemove = function (e) {
+      note.style.left = e.clientX - shiftX + 'px';
+      note.style.top = e.clientY - shiftY + 'px';
+    };
+
+    note.onmouseup = function () {
+      document.onmousemove = null;
+      note.onmouseup = null;
+    };
+  };
+
+  // Close the sticky note
+  function closeNote() {
+    note.style.display = "none";
+  }
+
+  // Load saved note content from localStorage
+  window.onload = function() {
+    var savedContent = localStorage.getItem("noteContent");
+    if (savedContent) {
+      document.getElementById("noteContent").value = savedContent;
+    }
+  };
+
+  // Save note content to localStorage whenever it's changed
+  document.getElementById("noteContent").addEventListener("input", function() {
+    var content = document.getElementById("noteContent").value;
+    localStorage.setItem("noteContent", content);
+  });
+</script>
+
+
+</html>
